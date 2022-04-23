@@ -9,7 +9,8 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 6s ease-in-out;
+    animation-direction: alternate-reverse;
   }
 }
 
@@ -25,14 +26,30 @@
 }
 
 .App-link {
-  color: #61dafb;
+  padding: 20px 30px;
+  color: #37aefe;
+  background: #0b26a4;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
+  font-size: 23px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.App-link:hover{
+  cursor: pointer;
+  background: hsl(229deg 87% 37%) !important;
+  box-shadow: 0px 2px 8px rgb(0 0 0 / 30%) !important;
+  transform: translateY(-5px);
 }
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: translateY(-20px) ;
   }
   to {
-    transform: rotate(360deg);
+    transform: translateY(20px) ;
   }
 }
