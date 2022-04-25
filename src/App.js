@@ -17,7 +17,6 @@ const KEY = process.env.REACT_APP_KEY;
 
 // Main app
 function App() {
-
   // app state for current and previous count
   const [currentCount, setcurrentCount] = useState(0);
   const [previousCount, setPreviousCount] = useState(0);
@@ -38,27 +37,27 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-
         {/* Hovering image */}
         <img src={logo} className="App-logo" alt="logo animation" />
 
         {/* Counter display component */}
         <Counter currentCount={currentCount} previousCount={previousCount} />
 
-        {/* HitButton display component */}
-        <HitButton
-          setcurrentCount={setcurrentCount}
-          currentCount={currentCount}
-          setPreviousCount={setPreviousCount}
-        />
+        <div className='button-container'>
+          {/* HitButton display component */}
+          <HitButton
+            setcurrentCount={setcurrentCount}
+            currentCount={currentCount}
+            setPreviousCount={setPreviousCount}
+          />
 
-        {/* ResetButton display component */}
-        <ResetButton
-          setcurrentCount={setcurrentCount}
-          currentCount={currentCount}
-          setPreviousCount={setPreviousCount}
-        />
-
+          {/* ResetButton display component */}
+          <ResetButton
+            setcurrentCount={setcurrentCount}
+            currentCount={currentCount}
+            setPreviousCount={setPreviousCount}
+          />
+        </div>
       </header>
     </div>
   );

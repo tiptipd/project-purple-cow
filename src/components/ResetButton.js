@@ -11,7 +11,6 @@ const KEY = process.env.REACT_APP_KEY;
 
 // Button component
 const Button = ({ setcurrentCount, setPreviousCount, currentCount }) => {
-  
   // function for resetting the count on reset button
   const resetCounter = async () => {
     setPreviousCount(currentCount);
@@ -22,7 +21,10 @@ const Button = ({ setcurrentCount, setPreviousCount, currentCount }) => {
 
   // Renderer for component
   return (
-    <button onClick={() => resetCounter()} className="App-link">
+    <button
+      onClick={() => resetCounter()}
+      className="App-link reset"
+    >
       RESET
     </button>
   );
