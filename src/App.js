@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import countapi from "countapi-js";
 
 // * Components
-import Button from "./components/Button";
+import HitButton from "./components/HitButton";
+import ResetButton from "./components/ResetButton";
 import Counter from "./components/Counter";
 
 // * Assets
@@ -44,12 +45,13 @@ function App() {
         {/* Counter display component */}
         <Counter currentCount={currentCount} previousCount={previousCount} />
 
-        {/* Button display component */}
-        <Button
+        {/* HitButton display component */}
+        <HitButton
           setcurrentCount={setcurrentCount}
           currentCount={currentCount}
           setPreviousCount={setPreviousCount}
         />
+        
       </header>
     </div>
   );
