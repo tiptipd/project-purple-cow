@@ -51,7 +51,14 @@ function App() {
           currentCount={currentCount}
           setPreviousCount={setPreviousCount}
         />
-        
+
+        {/* ResetButton display component */}
+        <ResetButton
+          setcurrentCount={setcurrentCount}
+          currentCount={currentCount}
+          setPreviousCount={setPreviousCount}
+        />
+
       </header>
     </div>
   );
