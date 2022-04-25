@@ -5,7 +5,10 @@ import CountUp from "react-countup";
 // * Assets
 import "../App.css";
 
+// Counter component
 const Counter = ({ currentCount, previousCount }) => {
+
+  // Micro-component for animating count-up for current count number
   const CountAnimated = () => {
     return (
       <CountUp
@@ -21,6 +24,7 @@ const Counter = ({ currentCount, previousCount }) => {
     );
   };
 
+  // Renderer for component
   return (
     <h1>
       Count {" "}
@@ -31,4 +35,5 @@ const Counter = ({ currentCount, previousCount }) => {
   );
 };
 
+// Exporter for component
 export default Counter;
