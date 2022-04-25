@@ -11,11 +11,11 @@ const KEY = process.env.REACT_APP_KEY;
 
 // Button component
 const Button = ({ setcurrentCount, setPreviousCount, currentCount }) => {
-  // function for incrementing the count on hit button
+  
+  // function for resetting the count on reset button
   const resetCounter = async () => {
     setPreviousCount(currentCount);
     await countapi.set(NAMESPACE, KEY, 0).then((result) => {
-      console.log("RESET", result);
       setcurrentCount(result.value.toString());
     });
   };
